@@ -202,10 +202,12 @@ tw-story[tags~="inspect"]{
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">var audio = document.createElement('audio');
 audio.src="https://github.com/jay98/Game_Design_Files/blob/master/DK%20Mountain%20%26%20Dino%20Dino%20Jungle%20-%20Mario%20Kart%20Double%20Dash!!%20Music%20Extended-%5BAudioTrimmer.com%5D.mp3?raw=true";
 audio.loop = true;
 audio.play();
+
 
 
 
@@ -265,6 +267,7 @@ Tigers are carnivores, eating only meat. They mainly feed on large mammals such 
 Tigers distinctive coats allow them to camoflauge during hunting.
 Tigers are commonly found in Asia.
 (put: 1 into $tigers)(put: $gorillaCount + 1 into $gorillaCount)
+(if: $gorillaCount is 1)[These tigers are kind of interesting.](if: $gorillaCount is 2)[These tigers are cool! This zoo is a lot different than the petting zoo you went to a few months ago](if: $gorillaCount is 3)[These tigers are incredible! You wish that this zoo was a petting zoo. You wish that you could get closer](if: $gorillaCount is 4)[These tigers are amazing! Your curiosity almost gets the best of you, but you resist the temptation]
 
 [[See other animals]]</tw-passagedata><tw-passagedata pid="23" name="Lions" tags="lion" position="1378,290" size="100,100">You arrive to the lion enclosure to see three lions sitting in the enclosure.
 
@@ -274,6 +277,7 @@ Lions live in social groups called prides that consist of a handful of related f
 At one point in time lions used to roam the world.
 Female lions tend to do the hunting while male lions protect the pride&#39;s territory.
 (put: 1 into $lions)(put: $gorillaCount + 1 into $gorillaCount)
+(if: $gorillaCount is 1)[These lions are kind of interesting.](if: $gorillaCount is 2)[These lions are cool! This zoo is a lot different than the petting zoo you went to a few months ago](if: $gorillaCount is 3)[These lions are incredible! You wish that this zoo was a petting zoo. You wish that you could get closer](if: $gorillaCount is 4)[These lions are amazing! Your curiosity almost gets the best of you, but you resist the temptation]
 
 [[See other animals]]</tw-passagedata><tw-passagedata pid="24" name="Brown Bears" tags="bear" position="1249,288" size="100,100">You arrive at a bear enclosure. &quot;What types of bears are those?&quot; Your mom tells you that they are brown bears.
 
@@ -284,7 +288,13 @@ Brown bears are ominvores. This means they eat just about anything. They also di
 (if: $tigers is 0)[(link-goto: &quot;Go see the tigers&quot;, &quot;Tigers&quot;)]
 (if: $bears is 0)[(link-goto: &quot;Go see the bears&quot;, &quot;Brown Bears&quot;)]
 (if: $giraffes is 0)[(link-goto: &quot;Go see the giraffes&quot;, &quot;Giraffes&quot;)]
-(if: $gorillaCount &gt;= 3)[(link-goto: &quot;Go see the gorillas&quot;, &quot;Gorillas&quot;)]</tw-passagedata><tw-passagedata pid="26" name="Gorillas" tags="gorilla_start_day" position="1484,870" size="100,100">You arrive at the gorilla enclosure and your curiosity begins to get the better of you. You see a big gorilla in the enclosure
+(if: $gorillaCount &gt;= 4)[(link-goto: &quot;Go see the gorillas&quot;, &quot;Gorillas&quot;)]</tw-passagedata><tw-passagedata pid="26" name="Gorillas" tags="gorilla_start_day" position="1484,870" size="100,100">You arrive at the gorilla enclosure.
+
+Gorillas are large apes that are native to Africa. They are typically divided into two groups. The mountain gorilla lives in the mountainous regions of central Africa, while the lowland gorilla lives in the flat, dense forests of central and western Africa.
+
+Gorillas are generally herbivores. They usually eat vegetation such as wild celery, shoots, roots, fruit, tree bark and tree pulp, but they have been known to eat small animals and insects. A male can eat up to 40 pounds of vegetation each day.
+
+Your curiosity for these interesting animals begins to get the better of you. You see a large gorilla, bigger than all the others
 
 [[Edge closer to the gorilla enclosure]]</tw-passagedata><tw-passagedata pid="27" name="Giraffes" tags="giraffe" position="1692,285" size="100,100">You arrive to the giraffe enclosure to find a big, yellow giraffe eating leaves from a tree.
 
@@ -294,6 +304,7 @@ They can run up to 35 miles per over short distances and 10 miles per hour for l
 
 A giraffe&#39;s neck is too short to reach the ground. As a result, it has to awkwardly spread its front legs or kneel to reach the ground for a drink of water.
 (put: 1 into $giraffes)(put: $gorillaCount + 1 into $gorillaCount)
+(if: $gorillaCount is 1)[These giraffes are kind of interesting.](if: $gorillaCount is 2)[These giraffes are cool! This zoo is a lot different than the petting zoo you went to a few months ago](if: $gorillaCount is 3)[These giraffes are incredible! You wish that this zoo was a petting zoo. You wish that you could get closer](if: $gorillaCount is 4)[These giraffes are amazing! Your curiosity almost gets the best of you, but you resist the temptation]
 
 [[See other animals]]</tw-passagedata><tw-passagedata pid="28" name="Favorite Oak Tree" tags="gorilla_tree" position="615,1024" size="100,100">Ah, nothing like old reliable.  Gorillas like yourself like strong sturdy trees like Oak trees because they weigh a great deal!  Some gorillas can weigh upwards of 600 pounds!  Thats a lot of weight for a tree to carry.
 
@@ -315,7 +326,7 @@ Branch by branch you climb.  You are now very high, some 40 feet up in the air, 
 You had a lot planned for the day, but figure it can wait.  You are very tired and your eyelids begin to flutter.... 
 
 [[Sleep in tree-&gt;Continue]]
-</tw-passagedata><tw-passagedata pid="32" name="Continue" tags="gorilla_sleep" position="327,1903" size="100,100">Mom look at that gorilla!  What is that!
+</tw-passagedata><tw-passagedata pid="32" name="Continue" tags="gorilla_sleep" position="327,1903" size="100,100">&quot;Mom look at that gorilla!&quot;
 
 Startled, you open your eyes.  It is early evening.  You begin to wonder how long you have been asleep.
 
@@ -382,7 +393,7 @@ You had a lot planned for the day, but figure it can wait.  You are very tired a
 ....
 ....
 
-If only you could [[get closer]].
+If only you could [[get a little bit closer]].
 Or maybe you should [[back away]] and find your mom.</tw-passagedata><tw-passagedata pid="44" name="FALL IN" tags="fall_in" position="1342,2342" size="100,100">OH NO THE GORILLA IS COMING TOWARDS YOU!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 The gorilla comes closer to the you and all of a sudden a bang rings out. The gorilla collapses. Animal control swoops in and takes the you away. The gorilla is dead.
@@ -397,17 +408,14 @@ You are dead.
 
 Then, more people with guns come in your enclosure.
 
+You&#39;re again startled as they run by and pick up the little human and scurry out.
 
-GEEEEZ, these humans gotta chill. They pick up the little human and scurry out.
+[[What&#39;s going on?-&gt;GoodEnd]]</tw-passagedata><tw-passagedata pid="47" name="End" tags="end" position="790,2730" size="100,100">RIP harambe... gone but never forgotten.
 
-
-[[Reveal Identity-&gt;GoodEnd]]</tw-passagedata><tw-passagedata pid="47" name="End" tags="end" position="790,2730" size="100,100">RIP HARAMBE GONE BUT NEVER FORGOTTEN
-
-We love you Harambe</tw-passagedata><tw-passagedata pid="48" name="GoodEnd" tags="good_end" position="805,2419" size="100,100">Harambe lives to see another day!
+We love you Harambe.</tw-passagedata><tw-passagedata pid="48" name="GoodEnd" tags="good_end" position="805,2419" size="100,100">Harambe lives to see another day!
 The world did not lose another hero.
 
-
-Harambe is the hero we need, not the one we deserve.</tw-passagedata><tw-passagedata pid="49" name="get closer" tags="get_closer" position="1498,1771" size="100,100">OH NO!!!!!!!!!!!!!!!!
+Harambe is the hero we need, not the one we deserve.</tw-passagedata><tw-passagedata pid="49" name="get a little bit closer" tags="get_closer" position="1483,1758" size="100,100">OH NO!!!!!!!!!!!!!!!!
 
 YOU [[FALL IN]]</tw-passagedata><tw-passagedata pid="50" name="back away" tags="back_away" position="1648,1774" size="100,100">You go and find your mom.
 She was so worried that she couldn&#39;t find you!
@@ -427,6 +435,8 @@ The Koala is endangered because people hunt them for their fur.
 Pandas eat almost exclusively bamboo. To stay healthy, they have to eat a lot—up to 15 percent of their body weight in 12 hours—so they eat fast!
 An adult female panda weighs 200 pounds.
 Sometimes male pandas relax by doing handstands against trees. 
+
+(if: $gorillaCount is 1)[These bears are kind of interesting.](if: $gorillaCount is 2)[These bears are cool! This zoo is a lot different than the petting zoo you went to a few months ago](if: $gorillaCount is 3)[These bears are incredible! You wish that this zoo was a petting zoo. You wish that you could get closer](if: $gorillaCount is 4)[These bears are amazing! Your curiosity almost gets the best of you, but you resist the temptation]
 
 [[See other animals]]</tw-passagedata></tw-storydata>
 
